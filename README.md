@@ -3,6 +3,10 @@ Temperature Monitoring Project Description
 
 ## Overview
 
+A real-time logging temperature and humidity monitoring platform.
+
+<img src="signal-2022-06-20-140959.jpg" width="200"/>
+
 This is a learning project I began to teach myself new techologies and platforms, and do something useful at the same time. Overall the project is not terribly complex but demonstrates the integration of a number of real world technologies. The intent is to create a product stack that would be suitable for real world use. The technologies and products used include:
 
 - Docker
