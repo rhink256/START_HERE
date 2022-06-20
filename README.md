@@ -67,7 +67,9 @@ The server can handle input from any number of sensors; they are distinguished b
 
 ## Limitations
 
-This project is a work in progress and not without warts. Some of the dependencies are out of date, the front end has no unit tests and there are unit tests missing for some classes in the back end. There is also absolutely no user management or authentication.
+This project is a work in progress and not without warts. These include but are not limited to the following:
+
+Some of the dependencies are out of date, the front end has no unit tests and there are unit tests missing for some classes in the back end. There is also absolutely no user management or authentication.
 
 The National Weather Service client is currently hardcoded. You would have to change the station identifier in the REST endpoint URL to change the station.
 
