@@ -33,11 +33,11 @@ This is a learning project I began to teach myself new techologies and platforms
 ## Repositories
 
 - [Server](https://github.com/rhink256/temperature_server)
-- Client
+- [Client](https://github.com/rhink256/client)
 - [Sensor](https://github.com/rhink256/arduino_sensor)
 - Compose
-- Server Container Image: Wildfly + Postgres Driver
-- Test Scripts
+- [Server Container Image: Wildfly + Postgres Driver](https://github.com/rhink256/wildfly_with_postgres_driver)
+- [Test Scripts](https://github.com/rhink256/Test-Scripts)
 
 ## Automation
 
