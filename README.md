@@ -8,6 +8,7 @@
 - [Compose](https://github.com/rhink256/Compose)
 - [Server Container Image: Wildfly + Postgres Driver](https://github.com/rhink256/wildfly_with_postgres_driver)
 - [Test Scripts](https://github.com/rhink256/Test-Scripts)
+- [Jenkins - Docker](https://github.com/rhink256/Jenkins-Docker)
 
 ## Overview
 
@@ -142,10 +143,16 @@ You will need to configure nexus with a maven and docker repository.
 
 ## Limitations
 
-This project is a work in progress and not without warts. These include but are not limited to the following:
+This project is a work in progress and not without warts. It is, after all, a spare-time self-education project. These include but are not limited to the following:
 
-Some of the dependencies are out of date, the front end has no unit tests and there are unit tests missing for some classes in the back end. There is also absolutely no user management or authentication.
-
-The National Weather Service client is currently hardcoded. You would have to change the station identifier in the REST endpoint URL to change the station.
-
-The websocket implementation is naive; it currently has no ability to reconnect on connection failure without refreshing the page.
+- some out of date dependencies
+- no front end unit tests
+- some missing backend unit test coverage
+- no automated end to end tests
+- no user management
+- no authentication
+- no security whatsoever
+- hardcoded URL in the National Weather Service API client
+- Naive websockets usage; no ability to reconnect if the websocket connection fails
+- I think one of the docker files copies in a bunch of local files. It works but it's not clean.
+-
