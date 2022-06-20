@@ -29,6 +29,7 @@ This is a learning project I began to teach myself new techologies and platforms
 - Javascript Object Notation (JSON)
 - Wildfly/JBOSS
 - H2 in memory database (for unit testing of database queries)
+- Postgres
 
 ## Repositories
 
