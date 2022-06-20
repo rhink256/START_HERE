@@ -34,7 +34,7 @@ This is a learning project I began to teach myself new techologies and platforms
 
 - [Server](https://github.com/rhink256/temperature_server)
 - Client
-- Sensor
+- [Sensor](https://github.com/rhink256/arduino_sensor)
 - Compose
 - Server Container Image: Wildfly + Postgres Driver
 - Test Scripts
