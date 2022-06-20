@@ -30,6 +30,10 @@ This is a learning project I began to teach myself new techologies and platforms
 - Wildfly/JBOSS
 - H2 in memory database (for unit testing of database queries)
 
+## Repositories
+
+rhink256/temperature_server
+
 ## Automation
 
 It doesn't completely come across in the github version of the project as it is not integrated with my local infrastructure, but this product demonstrates complete build, test, and deployment automation using Jenkins and Docker. The Jenkinsfiles and Dockerfiles are visible, but to get this completely working you would need an instance of Jenkins, a maven artifact repository, and a docker repository, and Gitlab (or similar) with webhooks configured to trigger Jenkins builds. Further, Jenkins would need to be configured with user credentials for the maven and docker repositories.
