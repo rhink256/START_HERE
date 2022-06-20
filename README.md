@@ -71,3 +71,5 @@ The server can handle input from any number of sensors; they are distinguished b
 This project is a work in progress and not without warts. Some of the dependencies are out of date, the front end has no unit tests and there are unit tests missing for some classes in the back end. There is also absolutely no user management or authentication.
 
 The National Weather Service client is currently hardcoded. You would have to change the station identifier in the REST endpoint URL to change the station.
+
+The websocket implementation is naive; it currently has no ability to reconnect on connection failure without refreshing the page.
