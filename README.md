@@ -5,6 +5,8 @@ Temperature Monitoring Project Description
 
 A real-time logging temperature and humidity monitoring platform. It supports as many external sensors as you like, and can read data from local National Weather Service stations using their public [API](https://www.weather.gov/documentation/services-web-api).
 
+The following image shows the client as rendered in a mobile web browser, with two sensors and one national weather service source.
+
 <img src="signal-2022-06-20-140959.jpg" width="200"/>
 
 This is a learning project I began to teach myself new techologies and platforms, and do something useful at the same time. Overall the project is not terribly complex but demonstrates the integration of a number of real world technologies. The intent is to create a product stack that would be suitable for real world use. The technologies and products used include:
@@ -67,3 +69,5 @@ The server can handle input from any number of sensors; they are distinguished b
 ## Limitations
 
 This project is a work in progress and not without warts. Some of the dependencies are out of date, the front end has no unit tests and there are unit tests missing for some classes in the back end. There is also absolutely no user management or authentication.
+
+The National Weather Service client is currently hardcoded. You would have to change the station identifier in the REST endpoint URL to change the station.
