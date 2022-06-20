@@ -31,11 +31,33 @@ It doesn't completely come across in the github version of the project as it is 
 
 ## Components
 
-The runtime components of this system are:
+### Client
 
-- Client (Javascript / Vue / VueX / Vuetify, served by Node.js, running in a Docker container)
-- Server (Java EE / Hibernate, served by Wildfy, running in a Docker container)
-- Environmental Sensors (Arduino
+The client is a Javascript based web front end built on top of the Vue framework. It uses VueX for state management and Vuetify for components. It communicates with the server via Websockets and REST.
+
+It is served by Node.js running in a Docker container.
+
+### Server
+
+The server is built on Java Enterprise Edition. It uses Hibernate as its JPA provider. It communicates with the Client as described above. It runs on the Wildfly application server, running in a Docker container. The Docker container is customized with the postgres JDBC driver.
+
+### Database
+
+An unmodified postgres docker image, configured and run thusly: 
+```
+docker run \
+    --name temperature_database_postgres \
+    -p 192.168.1.207:5432:5432 \
+    -e POSTGRES_PASSWORD=[PASSWORD] \
+    -v temperature_database:/var/lib/postgres/data \
+    --restart always \
+    -d postgres
+```
+
+### Environmental Sensors
+
+This can be anything sending the appropriate JSON to the appropriate REST endpoint. My implementation is the Arduino [MKR-WIFI-1010](https://store-usa.arduino.cc/products/arduino-mkr-wifi-1010?selectedStore=us)
+
 
 ## Limitations
 
