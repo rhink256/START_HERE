@@ -75,6 +75,71 @@ This can be anything sending the appropriate JSON to the appropriate REST endpoi
 
 The server can handle input from any number of sensors; they are distinguished by their IP address.
 
+## Development Environment
+
+While you can certainly build this project with less, this is a learning project, and one of the learning aspects was to set up and configure a solid set of development tools. Replicating my environment means installing the following tools on a PC, preferably an always-on server with a decent bit of RAM (16 gigs minimum).
+
+- Nexus
+- Jenkins
+- Gitlab
+- Docker (server side)
+- Docker Desktop (development PC)
+- pihole (or other local DNS server)
+
+The server is configured with multiple IP addresses to avoid port collisions. A pihole instance is configured with meaningful DNS names associated with these IP addresses.
+
+Jenkins, Nexus, and Gitlab are launched with docker:
+
+Jenkins:
+```
+docker run \
+    --restart always \
+    --name jenkins \
+    --detach \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -p [Jenkins IP]:80:8080 \
+    -p [Jenkins IP]:50000:50000 \
+    -v $(which docker):$(which docker) \
+    -v jenkins_home:/var/jenkins_home \
+    jenkins-docker
+```
+
+Then you'll need to configure pipelines for every project with a Jenkinsfile (once Gitlab is installed and configured). You'll also need to add Nexus credentials to the Jenkins credentials manager.
+
+Note jenkins refers to jenkins-docker. See the repositories section for details; jenkins-docker modifies the base jenkins image slightly to enable running docker commands on the host (one of the possible solutions for docker-in-docker, i.e. a docker instance that can execute docker commands)
+
+Gitlab:
+```
+docker run \
+    --detach \
+    --hostname gitlab.local  \
+    --publish [Gitlab IP]:443:443 \
+    --publish [Gitlab IP]:80:80  \
+    --publish [Gitlab IP]:22:22 \
+    --name gitlab \
+    --restart always \
+    --volume $GITLAB_HOME/config:/etc/gitlab \
+    --volume $GITLAB_HOME/logs:/var/log/gitlab \
+    --volume $GITLAB_HOME/data:/var/opt/gitlab \
+    gitlab/gitlab-ce:latest
+```
+
+Then you'll of course need to copy all of these projects into Gitlab and configure Jenkins webhooks, if you want build automation.
+
+Nexus:
+```
+docker run \
+    --restart always \
+    --detach \
+    -p 192.168.1.204:80:8081 \
+    -p 192.168.1.204:8080:8080 \
+    --name nexus \
+    -v nexus-data:/nexus-data \
+    sonatype/nexus3:3.39.0
+```
+
+You will need to configure nexus with a maven and docker repository.
+
 ## Limitations
 
 This project is a work in progress and not without warts. These include but are not limited to the following:
