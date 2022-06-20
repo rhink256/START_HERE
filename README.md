@@ -1,5 +1,14 @@
 # Temperature Monitoring Project Description
 
+## Project Repositories
+
+- [Server](https://github.com/rhink256/temperature_server)
+- [Client](https://github.com/rhink256/client)
+- [Sensor](https://github.com/rhink256/arduino_sensor)
+- [Compose](https://github.com/rhink256/Compose)
+- [Server Container Image: Wildfly + Postgres Driver](https://github.com/rhink256/wildfly_with_postgres_driver)
+- [Test Scripts](https://github.com/rhink256/Test-Scripts)
+
 ## Overview
 
 A real-time logging temperature and humidity monitoring platform. It supports as many external sensors as you like, and can read data from local National Weather Service stations using their public [API](https://www.weather.gov/documentation/services-web-api).
@@ -30,15 +39,6 @@ This is a learning project I began to teach myself new techologies and platforms
 - Wildfly/JBOSS
 - H2 in memory database (for unit testing of database queries)
 - Postgres
-
-## Repositories
-
-- [Server](https://github.com/rhink256/temperature_server)
-- [Client](https://github.com/rhink256/client)
-- [Sensor](https://github.com/rhink256/arduino_sensor)
-- [Compose](https://github.com/rhink256/Compose)
-- [Server Container Image: Wildfly + Postgres Driver](https://github.com/rhink256/wildfly_with_postgres_driver)
-- [Test Scripts](https://github.com/rhink256/Test-Scripts)
 
 ## Automation
 
