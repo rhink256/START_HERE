@@ -155,4 +155,3 @@ This project is a work in progress and not without warts. It is, after all, a sp
 - hardcoded URL in the National Weather Service API client
 - Naive websockets usage; no ability to reconnect if the websocket connection fails
 - I think one of the docker files copies in a bunch of local files. It works but it's not clean.
--
