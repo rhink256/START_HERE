@@ -1,5 +1,4 @@
-# START_HERE
-Temperature Monitoring Project Description
+# Temperature Monitoring Project Description
 
 ## Overview
 
