@@ -3,7 +3,7 @@ Temperature Monitoring Project Description
 
 ## Overview
 
-A real-time logging temperature and humidity monitoring platform.
+A real-time logging temperature and humidity monitoring platform. It supports as many external sensors as you like, and can read data from local National Weather Service stations using their public [API](https://www.weather.gov/documentation/services-web-api).
 
 <img src="signal-2022-06-20-140959.jpg" width="200"/>
 
