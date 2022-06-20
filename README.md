@@ -32,7 +32,12 @@ This is a learning project I began to teach myself new techologies and platforms
 
 ## Repositories
 
-rhink256/temperature_server
+- [Server](https://github.com/rhink256/temperature_server)
+- Client
+- Sensor
+- Compose
+- Server Container Image: Wildfly + Postgres Driver
+- Test Scripts
 
 ## Automation
 
